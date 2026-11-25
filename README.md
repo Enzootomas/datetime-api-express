@@ -1,19 +1,19 @@
 # 🕐 DateTime API Express
 
-API REST desenvolvida com **Node.js** e **Express.js** para retornar a data e a hora atual no fuso horário de São Paulo (`America/Sao_Paulo`), atendendo à **Atividade 02 da Aula 04 (Consumindo APIs no Front-end)**.
+API REST desenvolvida com **Node.js** e **Express.js** para retornar a data e a hora atual no fuso horário de São Paulo (`America/Sao_Paulo`), atendendo à **Atividade 02 da Aula 04 (Consumindo APIs no Front-end)** da disciplina de **Frameworks Front-end** (SENAI).
 
 ---
 
 ## 🎯 Objetivo
 
-Criar uma API REST utilizando Express.js com CORS habilitado e uma rota responsável por fornecer a data e a hora atual em formato JSON para consumo por uma aplicação Front-end independente.
+Criar uma API REST utilizando Express.js com CORS habilitado e uma rota responsável por fornecer a data, a hora atual, o dia da semana e metadados de fuso horário em formato JSON para consumo por uma aplicação Front-end independente ([datetime-frontend](https://github.com/Enzootomas/datetime-frontend)).
 
 ---
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias Utilizadas
 
 - Node.js
-- Express.js
+- Express.js 5
 - CORS
 - JavaScript (CommonJS)
 - API REST / JSON
@@ -21,17 +21,34 @@ Criar uma API REST utilizando Express.js com CORS habilitado e uma rota respons�
 
 ---
 
+## 📁 Estrutura de Diretórios
+
+```text
+datetime-api-express/
+├── api.js              # Servidor Express e rotas da API
+├── package.json        # Dependências e script de inicialização
+├── render.yaml         # Blueprint para deploy no Render
+├── .gitignore
+└── README.md
+```
+
+---
+
 ## 🔗 Endpoints Disponíveis
 
 ### 1. Verificação de status (`GET /`)
 
-Retorna uma mensagem indicando que o serviço está em execução.
+Retorna uma mensagem indicando que o serviço está em execução e os endpoints expostos.
 
 **Resposta (`200 OK`):**
 
 ```json
 {
-  "mensagem": "API de Data e Hora funcionando!"
+  "mensagem": "API de Data e Hora funcionando!",
+  "endpoints": {
+    "status": "GET /",
+    "dataHora": "GET /api/data-hora"
+  }
 }
 ```
 
@@ -50,17 +67,25 @@ GET /api/data-hora
 ```json
 {
   "data": "25/11/2026",
-  "hora": "19:45:00"
+  "hora": "20:48:22",
+  "diaSemana": "quarta-feira",
+  "fusoHorario": "America/Sao_Paulo",
+  "iso": "2026-11-25T23:48:22.823Z",
+  "status": "API Express online"
 }
 ```
 
 ---
 
-## 🚀 Como Executar Localmente
+## 🚀 Como Instalar e Executar
 
-Pré-requisitos: **Node.js** e **NPM** instalados.
+Pré-requisitos: **Node.js** (v18+) e **NPM**.
 
 ```bash
+# Clonar o repositório
+git clone https://github.com/Enzootomas/datetime-api-express.git
+cd datetime-api-express
+
 # Instalar dependências
 npm install
 
@@ -79,6 +104,13 @@ O repositório inclui o arquivo `render.yaml` configurado para publicação como
 - **Build Command:** `npm install`
 - **Start Command:** `node api.js`
 - **Porta:** dinâmica via `process.env.PORT || 3000`
+
+---
+
+## 🔗 Repositórios Relacionados
+
+- **Front-end consumidor (React + Vite):** [Enzootomas/datetime-frontend](https://github.com/Enzootomas/datetime-frontend)
+- **Central da Disciplina:** [Enzootomas/frontend-learning-hub](https://github.com/Enzootomas/frontend-learning-hub)
 
 ---
 

@@ -1,13 +1,19 @@
 {
   "name": "datetime-api-express",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
- "scripts": {
-  "start": "node api.js"
-},
-  "keywords": [],
-  "author": "",
+  "description": "API REST em Node.js e Express.js para consulta de data e hora atual (Aula 04 — Frameworks Front-end SENAI).",
+  "main": "api.js",
+  "scripts": {
+    "start": "node api.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest-api",
+    "datetime",
+    "senai"
+  ],
+  "author": "Enzo Gabriel Tomas De Souza",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
