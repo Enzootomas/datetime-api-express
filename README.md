@@ -109,7 +109,7 @@ O repositório inclui o arquivo `render.yaml` configurado para publicação como
 
 ## 🔗 Repositórios Relacionados
 
-- **Front-end consumidor (React + Vite):** [Enzootomas/datetime-frontend](https://github.com/Enzootomas/datetime-frontend)
+- **Front-end consumidor (React + Vite):** [🔗 Repositório](https://github.com/Enzootomas/datetime-frontend) | [🌐 Ver online](https://datetime-frontend-rose.vercel.app)
 - **Central da Disciplina:** [Enzootomas/frontend-learning-hub](https://github.com/Enzootomas/frontend-learning-hub)
 
 ---
